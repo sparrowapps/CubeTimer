@@ -12,6 +12,7 @@
 		F383A972200F34E600C7FC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F383A970200F34E600C7FC01 /* Main.storyboard */; };
 		F383A974200F34E600C7FC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F383A973200F34E600C7FC01 /* Assets.xcassets */; };
 		F383A977200F34E600C7FC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F383A975200F34E600C7FC01 /* LaunchScreen.storyboard */; };
+		F3959EF82010D03500458A0E /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3959EF72010D03500458A0E /* iOSDevCenters+GIF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F383A973200F34E600C7FC01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F383A976200F34E600C7FC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F383A978200F34E600C7FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3959EF72010D03500458A0E /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		F383A96B200F34E600C7FC01 /* CubeTimer */ = {
 			isa = PBXGroup;
 			children = (
+				F3959EF72010D03500458A0E /* iOSDevCenters+GIF.swift */,
 				F383A96C200F34E600C7FC01 /* AppDelegate.swift */,
 				F383A96E200F34E600C7FC01 /* ViewController.swift */,
 				F383A970200F34E600C7FC01 /* Main.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F383A96F200F34E600C7FC01 /* ViewController.swift in Sources */,
+				F3959EF82010D03500458A0E /* iOSDevCenters+GIF.swift in Sources */,
 				F383A96D200F34E600C7FC01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +281,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJC4688N2N;
 				INFOPLIST_FILE = CubeTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.leotek.co.kr.CubeTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sparrowapps.CubeTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,8 +297,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJC4688N2N;
 				INFOPLIST_FILE = CubeTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.leotek.co.kr.CubeTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sparrowapps.CubeTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,24 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CubeTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyh-xG-6fg">
+                                <rect key="frame" x="257" y="20" width="256" height="192"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="256" id="Tqw-9F-pYs"/>
+                                    <constraint firstAttribute="height" priority="750" constant="192" id="oKD-3h-BiR"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-oe-v6S">
+                                <rect key="frame" x="20" y="311" width="728" height="402"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="aAY-oe-v6S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3xm-OB-4kR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kyh-xG-6fg" secondAttribute="trailing" priority="250" constant="256" id="IK7-zS-eBF"/>
+                            <constraint firstItem="aAY-oe-v6S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IPf-gR-iBl"/>
+                            <constraint firstItem="aAY-oe-v6S" firstAttribute="top" secondItem="Kyh-xG-6fg" secondAttribute="bottom" constant="99" id="J94-Ke-mGg"/>
+                            <constraint firstItem="aAY-oe-v6S" firstAttribute="centerX" secondItem="Kyh-xG-6fg" secondAttribute="centerX" id="VSv-ZJ-wrT"/>
+                            <constraint firstItem="Kyh-xG-6fg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="kg8-hZ-BsE"/>
+                            <constraint firstItem="Kyh-xG-6fg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nFz-Zz-rdd"/>
+                            <constraint firstItem="Kyh-xG-6fg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="256" id="zVE-zf-N4i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pfW-zh-g1m" appends="YES" id="NlD-HZ-0EW"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="cubeView" destination="Kyh-xG-6fg" id="fgP-en-dcO"/>
+                        <outlet property="displayTimerLabel" destination="aAY-oe-v6S" id="T8b-fD-fOR"/>
+                        <outlet property="thisView" destination="8bC-Xf-vdC" id="eF2-nT-6L9"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="9Er-92-xIk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pfW-zh-g1m"/>
             </objects>
+            <point key="canvasLocation" x="275" y="13"/>
         </scene>
     </scenes>
 </document>
