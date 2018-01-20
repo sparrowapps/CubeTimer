@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet var thisView: UIView!
     @IBOutlet weak var cubeView: UIView!
     
+    private var stopImage : UIImage?
+    private var stopImageView : UIImageView?
+    
+    private var startImage : UIImage?
+    private var startImageView : UIImageView?
+    
+    
     var counter = 0.0 {
         didSet{
             if counter >= 3600.0 {
@@ -47,35 +54,42 @@ class ViewController: UIViewController {
         
         self.thisView.gestureRecognizers = [longPress,taps]
         
+        loadanimationImage()
+        
         animationStop()
     }
     
-    func animationStop() {
-        let image = UIImage(named: "cube_stop")
-        let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: 0 , y: 0, width:
+    func loadanimationImage() {
+        stopImage = UIImage(named: "cube_stop")
+        stopImageView = UIImageView(image: stopImage)
+        stopImageView?.frame = CGRect(x: 0 , y: 0, width:
             256.0 , height: 192.0)
         
-        cubeView.addSubview(imageView)
-    }
-    
-    func animationStart() {
-        //gif 이미지 처리
         if #available(iOS 9.0, *) {
             if let asset = NSDataAsset(name: "cube") {
                 let data = asset.data
                 _ = try? JSONSerialization.jsonObject(with: data, options: [])
                 
-                let gifImage = UIImage.gifImageWithData(data)
-                let imageView = UIImageView(image: gifImage)
-                imageView.frame = CGRect(x: 0 , y: 0, width:
+                startImage = UIImage.gifImageWithData(data)
+                startImageView = UIImageView(image: startImage)
+                startImageView?.frame = CGRect(x: 0 , y: 0, width:
                     256.0 , height: 192.0)
-                
-                cubeView.addSubview(imageView)
             }
         } else {
             // Fallback on earlier versions
         }
+    }
+    
+    
+    func animationStop() {
+        cubeView.addSubview(stopImageView!)
+    }
+    
+    func animationStart() {
+        for view in cubeView.subviews {
+            view.removeFromSuperview()
+        }
+        cubeView.addSubview(startImageView!)
     }
     
     @objc func handleTapGesture(recoginzer: UILongPressGestureRecognizer) {
