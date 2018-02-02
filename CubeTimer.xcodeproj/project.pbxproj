@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F381E1E520245C88007D33F6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F383A969200F34E500C7FC01 /* CubeTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F383A96C200F34E600C7FC01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F383A96E200F34E600C7FC01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		F383A960200F34E500C7FC01 = {
 			isa = PBXGroup;
 			children = (
+				F381E1E520245C88007D33F6 /* README.md */,
 				F383A96B200F34E600C7FC01 /* CubeTimer */,
 				F383A96A200F34E500C7FC01 /* Products */,
 			);
