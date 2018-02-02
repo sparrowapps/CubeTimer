@@ -3,7 +3,7 @@
 //  CubeTimer
 //
 //  Created by JUN HO CHOI on 2018. 1. 17..
-//  Copyright © 2018년 Leotek. All rights reserved.
+//  Copyright © 2018년 sparrowapps. All rights reserved.
 //
 
 import UIKit
