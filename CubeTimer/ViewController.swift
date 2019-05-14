@@ -64,20 +64,12 @@ class ViewController: UIViewController {
         stopImageView = UIImageView(image: stopImage)
         stopImageView?.frame = CGRect(x: 0 , y: 0, width:
             256.0 , height: 192.0)
-        
-        if #available(iOS 9.0, *) {
-            if let asset = NSDataAsset(name: "cube") {
-                let data = asset.data
-                _ = try? JSONSerialization.jsonObject(with: data, options: [])
-                
-                startImage = UIImage.gifImageWithData(data)
-                startImageView = UIImageView(image: startImage)
-                startImageView?.frame = CGRect(x: 0 , y: 0, width:
-                    256.0 , height: 192.0)
-            }
-        } else {
-            // Fallback on earlier versions
-        }
+
+        let fileNmae = "cube"
+        startImage = UIImage.gifImageWithName(fileNmae)
+        startImageView = UIImageView(image: startImage)
+        startImageView?.frame = CGRect(x: 0 , y: 0, width:
+            256.0 , height: 192.0)
     }
     
     

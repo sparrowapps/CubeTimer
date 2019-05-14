@@ -39,7 +39,7 @@ extension UIImage {
                 print("image named \"\(gifUrl)\" doesn't exist")
                 return nil
         }
-        guard let imageData = try? Data(contentsOf: bundleURL!) else {
+        guard let imageData = try? Data(contentsOf: bundleURL) else {
             print("image named \"\(gifUrl)\" into NSData")
             return nil
         }
